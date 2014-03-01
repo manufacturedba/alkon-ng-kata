@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html data-ng-app="alkonkata">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+    <div id="main" class="container ng-cloak" role="main">
+        <header>
+            <h1>Alkon Kata</h1>
+        </header>
+        <!-- end header -->
+        <section class="ng-view"></section>
+        <!-- end section.ng-view -->
+        <footer class="navbar navbar-fixed-bottom">
+            <div class="container-fluid">
+                &copy; Company 2014. All Rights Reserved.
+            </div>
+        </footer>
+        <!-- end footer -->
+    </div>
+    <!-- end #main -->
+
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
+    <script src="lib/angular/angular-animate.min.js"></script>
+
+    <script src="js/services/alkonSrvc.js"></script>
+    <script src="js/controllers/mainCtrl.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
