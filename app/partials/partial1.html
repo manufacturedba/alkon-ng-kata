@@ -1,1 +1,33 @@
-<h1>hello</h1>
+<div>
+    <div class="form-group">
+        <label>State</label>
+        <select data-ng-model="selectedState" class="form-control" data-ng-options="c.state for c in states" data-ng-change="updateCities()">
+            <option value="">Select State</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>City</label>
+        <select data-ng-model="selectedCity" data-ng-disabled="disabled" class="form-control" data-ng-options="c.city for c in cities" data-ng-change="getDetail()">
+            <option value="">Select City</option>
+        </select>
+    </div>
+</div>
+
+<div>
+    <h2>{{city.city}}</h2>
+    <table class="table table-striped">
+        <thead>
+            <th>Zipcode</th>
+            <th>Location</th>
+            <th>Population</th>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="detail in city.details">
+                <td>{{detail.zip || "&nbsp;"}}</td>
+                <td>{{detail.loc || "&nbsp;"}}</td>
+                <td>{{detail.pop || "&nbsp;"}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

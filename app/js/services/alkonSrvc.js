@@ -23,7 +23,7 @@ mod.service("alkonSrvc", ["$http", "$q", function (http, q) {
     this.getStates = function () {
         defer = q.defer();
 
-        http.get("http://").success(success).error(error);
+        http.get("http://ec2-184-73-40-119.compute-1.amazonaws.com:35125/States").success(success).error(error);
 
         return defer.promise;
     };
@@ -37,7 +37,7 @@ mod.service("alkonSrvc", ["$http", "$q", function (http, q) {
     this.getCities = function (state) {
         defer = q.defer();
 
-        http.get("").success(success).error(error);
+        http.get("http://ec2-184-73-40-119.compute-1.amazonaws.com:35125/Cities/state/" + state).success(success).error(error);
 
         return defer.promise;
     };
@@ -51,10 +51,11 @@ mod.service("alkonSrvc", ["$http", "$q", function (http, q) {
      */
     this.getCity = function (state, city) {
         defer = q.defer();
-
-        http.get("").success(success).error(error);
+                              console.log(state, city)
+        http.get("http://ec2-184-73-40-119.compute-1.amazonaws.com:35125/City/state/" + state + "/city/" + city).success(success).error(error);
 
         return defer.promise;
     };
 
 }]);
+

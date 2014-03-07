@@ -1,1 +1,5 @@
 @import "../lib/bootstrap/bootstrap.min.css";
+
+h2 {
+    color: #245269;
+}
