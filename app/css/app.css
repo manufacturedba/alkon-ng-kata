@@ -1,5 +1,8 @@
 @import "../lib/bootstrap/bootstrap.min.css";
 
+h1 {
+    font-weight: bold;
+}
 h2 {
     color: #245269;
 }

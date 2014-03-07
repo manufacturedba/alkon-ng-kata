@@ -3,7 +3,6 @@
 var mod = angular.module("com.alkon.controllers", []);
 
 mod.controller("MainCtrl", ["$scope", "alkonSrvc", function (scope, alkon) {
-
     function disabled() {
         scope.disabled = (!scope.selectedState) ? true : false;
     }
@@ -28,7 +27,5 @@ mod.controller("MainCtrl", ["$scope", "alkonSrvc", function (scope, alkon) {
         });
     };
 
-    (function() {
-         disabled();
-    })();
+    disabled();
 }]);

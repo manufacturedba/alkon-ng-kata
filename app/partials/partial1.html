@@ -21,12 +21,14 @@
             <th>Zipcode</th>
             <th>Location</th>
             <th>Population</th>
+            <th></th>
         </thead>
         <tbody>
             <tr data-ng-repeat="detail in city.details">
                 <td>{{detail.zip || "&nbsp;"}}</td>
                 <td>{{detail.loc || "&nbsp;"}}</td>
                 <td>{{detail.pop || "&nbsp;"}}</td>
+                <td><a data-ng-href="https://www.google.com/maps/place/{{selectedCity.city}},{{selectedState.state}}" target="_blank">Google Map It!</a></td>
             </tr>
         </tbody>
     </table>
