@@ -3,6 +3,23 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="css/app.css" />
+    <style type="text/css">
+      #city-selection {max-height:200px;overflow-y:scroll}
+      #map-canvas { width: 100%;height:400px; }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+    <script type="text/javascript">
+      function initialize(lat, lng) {
+        var mapOptions = {
+          center: new google.maps.LatLng(lat, lng),
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      }
+    </script>
 </head>
 <body>
     <div id="main" class="container ng-cloak" role="main">
@@ -26,7 +43,7 @@
     <script src="lib/angular/angular-animate.min.js"></script>
 
     <script src="js/services/alkonSrvc.js"></script>
-    <script src="js/controllers/mainCtrl.js"></script>
+    <script src="js/controllers/MainCtrl.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

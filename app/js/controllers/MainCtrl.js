@@ -24,6 +24,7 @@ mod.controller("MainCtrl", ["$scope", "alkonSrvc", function (scope, alkon) {
     scope.getDetail = function () {
         alkon.getCity(scope.selectedState.state, scope.selectedCity.city).then(function (data) {
             scope.city = data[0];
+            initialize(scope.city.details[0].loc[1], scope.city.details[0].loc[0]);
         });
     };
 
